@@ -3,13 +3,14 @@
 This folder keeps shell scripts to make Linux setup easier and others
 routines as well.
 
-## run_after_install_xubuntu_rt.sh
+## xubuntu_run_after_install_rt.sh
 
-- Install some software useful for diary work.
+- Install some useful software for diary work.
 - It's from @fernandomayer and modified by @rafatieppo
 - It demands super user to run
 
-## config_git_github_rt.sh
+
+## github_config_rt.sh
 
 - Install and configure **GITHUB**
 - It's from @fernandomayer and modified by @rafatieppo
