@@ -1,6 +1,6 @@
 # SHELL_SCRIPT
 
-This folder keeps shell scripts to Linux install easier and other
+This folder keeps shell scripts to make Linux setup easier and others
 routines as well.
 
 ## run_after_install_xubuntu_rt.sh
