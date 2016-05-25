@@ -21,7 +21,7 @@ routines as well.
 - It was developed by @rafatieppo
 - Super user is no mandatory
 - It's necessary some improvements
-- install filter correctly
+    - to install filter correctly
 
 ## LICENSE
 
