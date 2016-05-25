@@ -1,4 +1,4 @@
-# SHELL_SCRIPT
+# SHELL_SCRIPT folder
 
 This folder keeps shell scripts to make Linux setup easier and others
 routines as well.
