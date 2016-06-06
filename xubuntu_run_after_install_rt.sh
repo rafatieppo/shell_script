@@ -106,7 +106,7 @@ echo Install python-dev ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-## Python auxiliar pq estava dando problema na instalacao do pandoc-fignos
+## To suport pandoc-fignos setup
     apt-get install python-dev
 fi
 
@@ -119,6 +119,24 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
+echo Install GNU Cash ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    sudo apt-get install gnucash
+fi
+
+echo -------------------------------------------------------------------
+echo Install Libreoffice ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    sudo add-apt-repository ppa:libreoffice/ppa
+    sudo apt-get update
+    sudo apt-get install libreoffice
+fi
+
+echo -------------------------------------------------------------------
 echo Install spotfy ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
@@ -127,4 +145,14 @@ if [ $opcao -eq 1 ] ; then
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59 &&
     sudo apt-get update -qq &&
     sudo apt-get install spotify-client
+fi
+
+echo -------------------------------------------------------------------
+echo Install QGIS with GRASS ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+sudo apt-get update
+sudo apt-get install qgis python-qgis qgis-plugin-grass
 fi
