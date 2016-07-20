@@ -127,13 +127,52 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install Libreoffice ? [ 1/0 ]
+echo Install ONLY Libreoffice Repository? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
     sudo add-apt-repository ppa:libreoffice/ppa
     sudo apt-get update
-    sudo apt-get install libreoffice
+fi
+
+echo -------------------------------------------------------------------
+echo Install ONLY Libreoffice DRAW? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    sudo apt-get install libreoffice-draw
+fi
+
+echo -------------------------------------------------------------------
+echo Install ONLY Libreoffice PRESENTATION? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    sudo apt-get install libreoffice-impress
+fi
+
+echo -------------------------------------------------------------------
+echo Install kolourpaint4? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    sudo apt-get install kolourpaint4
+fi
+
+echo -------------------------------------------------------------------
+echo Install Gparted? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    sudo apt-get install gparted
+fi
+
+echo -------------------------------------------------------------------
+echo Install Unetbootin? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    sudo apt-get install unetbootin
 fi
 
 echo -------------------------------------------------------------------
@@ -141,10 +180,10 @@ echo Install spotfy ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    sudo apt-add-repository -y "deb http://repository.spotify.com stable non-free" &&
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59 &&
-    sudo apt-get update -qq &&
-    sudo apt-get install spotify-client
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update
+sudo apt-get install spotify-client
 fi
 
 echo -------------------------------------------------------------------
@@ -155,4 +194,20 @@ if [ $opcao -eq 1 ] ; then
 sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
 sudo apt-get install qgis python-qgis qgis-plugin-grass
+fi
+
+echo -------------------------------------------------------------------
+echo Install GIMP ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+sudo apt-get install gimp
+fi
+
+echo -------------------------------------------------------------------
+echo Install inkscape ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+sudo apt-get install inkscape
 fi
