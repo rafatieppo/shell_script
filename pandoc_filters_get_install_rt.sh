@@ -1,3 +1,4 @@
+#!/bin/bash
 # ONLY Get and Pandoc filters
 # You must install PANDOC before and SETUPTOOL as weel
 # sudo apt-get install python-setuptools

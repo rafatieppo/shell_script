@@ -17,6 +17,7 @@ read opcao
 if [ $opcao -eq 1 ] ; then
     apt-get install myspell-pt-br 
     apt-get install aspell-br
+    apt-get install aspell-pt-br
 fi
 
 #echo -------------------------------------------------------------------
