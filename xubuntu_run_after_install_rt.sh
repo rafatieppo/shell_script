@@ -11,6 +11,16 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
+echo Install X11 toolkit etc? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install build-essential texinfo libx11-dev libxpm-dev
+    libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev
+    libncurses-dev libxpm-dev automake autoconf
+fi
+
+echo -------------------------------------------------------------------
 echo Install portuguese dictionaries? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
