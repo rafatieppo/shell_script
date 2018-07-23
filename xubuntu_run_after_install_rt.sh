@@ -40,7 +40,7 @@ fi
 #fi
 
 echo -------------------------------------------------------------------
-echo Install R [ 1/0 ]?
+echo It is for Ubuntu 16: Install R [ 1/0 ]? 
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
@@ -52,6 +52,15 @@ if [ $opcao -eq 1 ] ; then
     apt-get update &&
     apt-get upgrade &&
     apt-get install r-base
+fi
+
+echo -------------------------------------------------------------------
+echo It is for Ubuntu 18: Install R [ 1/0 ]?
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+#Add following entry
+     sudo apt-get install r-base
 fi
 
 echo -------------------------------------------------------------------
@@ -86,11 +95,17 @@ echo Install LaTeX? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    apt-get install -y texlive-base texlive-bibtex-extra \
-	texlive-fonts-extra texlive-fonts-recommended \
-	texlive-generic-extra texlive-latex-extra texlive-math-extra \
-	texlive-plain-extra texlive-science latex-xcolor latex-beamer \
-	texlive-lang-portuguese \ texlive-publishers \
+    apt-get install -y texlive-latex-extra
+fi
+
+echo -------------------------------------------------------------------
+echo Install LaTeX science and publishers? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install texlive-science \
+    texlive-publishers \
+    texlive-lang-portuguese \
 	cm-super cm-super-minimal cm-super-x11 auctex
 fi
 
@@ -138,47 +153,6 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install GNU Cash ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo apt-get install gnucash
-fi
-
-echo -------------------------------------------------------------------
-echo Install ONLY Libreoffice Repository? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo add-apt-repository ppa:libreoffice/ppa
-    sudo apt-get update
-fi
-
-echo -------------------------------------------------------------------
-echo Install ONLY Libreoffice DRAW? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo apt-get install libreoffice-draw
-fi
-
-echo -------------------------------------------------------------------
-echo Install ONLY Libreoffice PRESENTATION? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo apt-get install libreoffice-impress
-fi
-
-echo -------------------------------------------------------------------
-echo Install kolourpaint4? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo apt-get install kolourpaint4
-fi
-
-echo -------------------------------------------------------------------
 echo Install Gparted? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
@@ -192,17 +166,6 @@ echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
     sudo apt-get install unetbootin
-fi
-
-echo -------------------------------------------------------------------
-echo Install spotfy ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
-echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update
-sudo apt-get install spotify-client
 fi
 
 echo -------------------------------------------------------------------
