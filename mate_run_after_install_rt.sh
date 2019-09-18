@@ -152,6 +152,21 @@ if [ $opcao -eq 1 ] ; then
     apt-get install install python3-pip
 fi
 
+
+sudo apt-get -y install python3-pip
+sudo apt-get install python-pip
+sudo apt install ubuntu-software
+sudo apt install openjdk-11
+
+
+
+
+
+
+
+
+
+
 echo -------------------------------------------------------------------
 echo ATTENTION now install virtual env python 3 ? [ 1/0 ]
 echo -------------------------------------------------------------------

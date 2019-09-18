@@ -1,24 +1,6 @@
 #!/bin/bash
-# for Xubuntu (Ubuntu Xfce). Development by @fernandomayer.
-# new version 05-25-2016, by @rafatieppo
-
-echo -------------------------------------------------------------------
-echo Install Drivers, midia, codecs? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install ubuntu-restricted-extras libavcodec-extra
-fi
-
-echo -------------------------------------------------------------------
-echo Install X11 toolkit etc? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install build-essential texinfo libx11-dev libxpm-dev
-    libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev
-    libncurses-dev libxpm-dev automake autoconf
-fi
+# for Debian (Ubuntu Xfce).
+# new version 09-18-2019, by @rafatieppo
 
 echo -------------------------------------------------------------------
 echo Install portuguese dictionaries? [ 1/0 ]
@@ -30,57 +12,15 @@ if [ $opcao -eq 1 ] ; then
     apt-get install aspell-pt-br
 fi
 
-#echo -------------------------------------------------------------------
-#echo Install protected DVD reader? [ 1/0 ]
-#echo -------------------------------------------------------------------
-#read opcao
-#if [ $opcao -eq 1 ] ; then
-#    apt-get install libdvdread4
-#    /usr/share/doc/libdvdread4/install-css.sh
-#fi
-
 echo -------------------------------------------------------------------
-echo It is for Ubuntu 16: Install R [ 1/0 ]? 
+echo Install R [ 1/0 ]?
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
 #Add following entry
-    add-apt-repository 'deb http://cran.rstudio.com/bin/linux/ubuntu trusty/' 
-#Add the Public Keys
-    gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 &&
-    gpg -a --export E084DAB9 | sudo apt-key add - &&
-    apt-get update &&
-    apt-get upgrade &&
-    apt-get install r-base
+     apt-get install r-base
 fi
 
-echo -------------------------------------------------------------------
-echo It is for Ubuntu 18: Install R [ 1/0 ]?
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-#Add following entry
-     sudo apt-get install r-base
-fi
-
-echo -------------------------------------------------------------------
-echo Install rgdal [ 1/0 ]?
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install libgdal1-dev libproj-dev
-fi
-
-echo -------------------------------------------------------------------
-echo Install Emacs 24? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    # add-apt-repository -y ppa:cassou/emacs
-    # apt-get update
-    apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg \
-	emacs-goodies-el
-fi
 
 echo -------------------------------------------------------------------
 echo Install ess [ 1/0 ]
@@ -145,22 +85,6 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install PIP3 for virtual env python 3 ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install install python3-pip
-fi
-
-echo -------------------------------------------------------------------
-echo ATTENTION now install virtual env python 3 ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo -H pip3 install virtualenv 
-fi
-
-echo -------------------------------------------------------------------
 echo Install font manager ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
@@ -169,43 +93,44 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install Gparted? [ 1/0 ]
+echo Install QGIS ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    sudo apt-get install gparted
+    apt-get install qgis
 fi
 
 echo -------------------------------------------------------------------
-echo Install Unetbootin? [ 1/0 ]
+echo Install GRASS ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    sudo apt-get install unetbootin
+    apt-get install grass
 fi
 
 echo -------------------------------------------------------------------
-echo Install QGIS with GRASS ? [ 1/0 ]
+echo Install GRASS-GUI ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-sudo apt-get update
-sudo apt-get install qgis python-qgis qgis-plugin-grass
+    apt-get install grass-gui
 fi
 
 echo -------------------------------------------------------------------
-echo Install GIMP ? [ 1/0 ]
+echo Install GRASS-DEV ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-sudo apt-get install gimp
+    apt-get install grass-dev
 fi
 
-echo -------------------------------------------------------------------
-echo Install inkscape ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-sudo apt-get install inkscape
-fi
+
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,13 @@
 This folder keeps shell scripts to make Linux setup easier and others
 routines as well.
 
+## debian_run_after_install_rt.sh
+
+- Install some useful software for diary work.
+- by @rafatieppo
+- In Debian 10 you need super user, run as follows:
+    `su -`
+
 ## pandoc_filters_get_install_rt.sh
 
 - Just GET **PANDOC FILTERS**

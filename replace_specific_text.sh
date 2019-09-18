@@ -14,3 +14,5 @@ sed -i 's/\/home\/rafatieppo\/Dropbox\/CSS\//.\/PICS\//g' *.html
 
 find . -type f -name "*baz*" -exec sed -i 's/\/home\/rafatieppo\/Dropbox\/CSS\//.\/PICS\//g' {} +
 
+find . -type f -name "*.txt" -exec sed -i 's/á/a/g' {} +
+
