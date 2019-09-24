@@ -84,7 +84,7 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install Pandoc ? [ 1/0 ]
+echo Install Pandoc-citeproc ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
@@ -141,8 +141,37 @@ if [ $opcao -eq 1 ] ; then
     apt-get install grass-dev
 fi
 
+echo -------------------------------------------------------------------
+echo Install python3-pip ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get -y install python3-pip
+fi
 
+echo -------------------------------------------------------------------
+echo Install python3-tk ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install python3-tk
+fi
 
+echo -------------------------------------------------------------------
+echo Install jupyter by pip3 ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    pip3 install jupyter
+fi
+
+echo -------------------------------------------------------------------
+echo Install jupyter by pip3 ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    pip3 install jupyterlab
+fi
 
 
 

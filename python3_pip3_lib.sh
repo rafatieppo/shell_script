@@ -3,10 +3,10 @@
 # version 09-18-2019, by @rafatieppo
 
 echo -------------------------------------------------------------------
-echo Install autopep8? [ 1/0 ]
+echo Install libraries from python3_require_packs.txt? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    pip3 install autopep8
+    pip3 install -r python3_require_packs.txt --user
 fi
 

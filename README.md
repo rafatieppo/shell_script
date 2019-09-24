@@ -8,7 +8,13 @@ routines as well.
 - Install some useful software for diary work.
 - by @rafatieppo
 - In Debian 10 you need super user, run as follows:
-    `su -`
+    `su `
+
+## github_config_rt.sh
+
+- Install and configure **GITHUB**
+- It's from @fernandomayer and modified by @rafatieppo
+- Super user is no mandatory
 
 ## pandoc_filters_get_install_rt.sh
 
@@ -27,11 +33,9 @@ routines as well.
 - Super user is no mandatory
 - developed by @rafatieppo
 
-## github_config_rt.sh
+## python3_pip3_lib.sh
 
-- Install and configure **GITHUB**
-- It's from @fernandomayer and modified by @rafatieppo
-- Super user is no mandatory
+- instal libriries by means pip3 from fr
 
 ## xubuntu_run_after_install_rt.sh
 
