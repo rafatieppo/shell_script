@@ -13,6 +13,7 @@ Pandas
 pandoc-eqnos
 pandoc-fignos
 pandoc-tablenos
+pep8
 plotly_express
 Pweave
 pyshp
