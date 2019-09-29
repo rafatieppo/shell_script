@@ -97,8 +97,15 @@ echo Install python-dev ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-## To suport pandoc-fignos setup
     apt-get install python-dev
+fi
+
+echo -------------------------------------------------------------------
+echo Install python-setuptools ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install python-setuptools
 fi
 
 echo -------------------------------------------------------------------
