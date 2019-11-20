@@ -8,6 +8,7 @@ importmagic
 lxml
 matplotlib
 networkx
+nltk
 numpy
 Pandas
 pandoc-eqnos
