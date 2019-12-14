@@ -34,9 +34,16 @@ routines as well.
 - Super user is no mandatory
 - developed by @rafatieppo
 
+## pop_os76_run_after_install_rt.sh
+
+- Install some useful software for diary work.
+- by @rafatieppo
+- You need super user
+
 ## python3_pip3_lib.sh
 
 - instal libriries by means pip3 from fr
+- no require sudo (to install in `/home`)
 
 ## xubuntu_run_after_install_rt.sh
 
