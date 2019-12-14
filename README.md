@@ -15,7 +15,7 @@ routines as well.
 - Install and configure **GITHUB**
 - It's from @fernandomayer and modified by @rafatieppo
 - Super user is no mandatory
-- no debian instalar como su e NAO su -
+- no debian instalar como `su` e NAO `su -`
 
 ## pandoc_filters_get_install_rt.sh
 
