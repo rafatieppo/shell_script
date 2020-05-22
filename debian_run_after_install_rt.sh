@@ -134,6 +134,22 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
+echo Install themes and icons ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install arch-theme numix-icon-theme adwaita-icon-theme mate-tweak
+fi
+
+echo -------------------------------------------------------------------
+echo Install ADAPTA themes and icons 659 MB in disk ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install adapta-gtk-theme
+fi
+
+echo -------------------------------------------------------------------
 echo Install QGIS ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
