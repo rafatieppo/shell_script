@@ -45,6 +45,7 @@ read opcao
 if [ $opcao -eq 1 ] ; then
     apt-get install texlive-science \
     texlive-publishers \
+    texlive-extra-utils \
     texlive-lang-portuguese \
 	cm-super cm-super-minimal cm-super-x11 auctex
 fi
