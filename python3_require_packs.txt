@@ -4,6 +4,7 @@ datetime
 google-api-python-client
 gpxpy
 grass-session
+flask
 folium
 icalendar
 importmagic

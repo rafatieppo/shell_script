@@ -3,7 +3,7 @@ title: A guide to install linux hardware
 author: Rafael Tieppo 
 date: 2020-05-21
 --- 
-
+sudo apt-get install firmware-linux
 
 # Graphic card
 
@@ -15,6 +15,9 @@ lspci -nn | grep VGA
 lspci -k | grep -EA3 'VGA|Display'
 lspci -nnk | grep -i -EA3 "3d|display|vga"
 ```
+
+`lsmod | grep -i nvidia` #modulos
+`glxinfo|egrep "OpenGL vendor|OpenGL renderer"`
 
 ## AMD
 
@@ -63,6 +66,8 @@ apt install firmware-linux firmware-linux-nonfree libdrm-amdgpu1
 xserver-xorg-video-amdgpu 
 ```
 
+sudo apt-get install firmware-linux
+
 ### How to Install Vulkan
 
 Vulkan support isn't strictly necessary, but with the widening support
@@ -110,13 +115,19 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## Nvidia
 
+### Installation
+
 - Debian
 [source](https://superuser.com/questions/1484109/debian-10-hybrid-graphics-how-to-use-nvidia-drivers-instead-of-nouveau)
-and [source](https://linuxconfig.org/how-to-install-nvidia-driver-on-debian-10-buster-linux)
+and
+[source](https://linuxconfig.org/how-to-install-nvidia-driver-on-debian-10-buster-linux)
+and
+[Optimus](https://wiki.debian.org/NvidiaGraphicsDrivers/Optimus#Dynamic_Graphics_Disabled_-_xrandr_and_Display_Manager_Scripts)
+and [lightdm](https://wiki.debian.org/LightDM#Viewing_current_configuration)
     0. Enable non-free repository
     `/etc/apt/sources.list`
-    - if is NOT **freezing** jump to 5
-    - if is **freezing** the problem us NEUVOU - JUST edit if you have that files:
+    `apt-get update`
+    - if is **freezing** the problem is **NOUVEAU** - edit files as follow:
     1. nano /etc/modprobe.d/blacklist.conf :
     ```
     blacklist nouveau
@@ -129,12 +140,12 @@ and [source](https://linuxconfig.org/how-to-install-nvidia-driver-on-debian-10-b
     ```
     GRUB_CMDLINE_LINUX_DEFAULT="nouveau.modeset=0 quiet"
     ```
-    3. vim /etc/modprobe.d/nouveau-kms.conf :
+    3. nano /etc/modprobe.d/nouveau-kms.conf :
     ```
    options nouveau modeset=0
    GRUB_CMDLINE_LINUX_DEFAULT="nouveau.modeset=0 quiet"
    ```
-   4. update grub and reboot
+    4. update grub and reboot
    ```
    update-grub
    reboot
@@ -147,6 +158,70 @@ and [source](https://linuxconfig.org/how-to-install-nvidia-driver-on-debian-10-b
    `apt-get install nvidia-driver`
    8. Reboot
    `systemctl reboot`
+   
+### Configuration 
+
+Hybrid card: I tried [Bumblebee](https://wiki.debian.org/Bumblebee), but no success!
+
+Another attempt was `xrandr`, it works.
+
+1. Ensure xrandr is installed and available: `apt-get install x11-xserver-utils`
+2. Modify or create (if one doesn't exist) an `xorg.conf` under
+   `/etc/X11/xorg.conf`; add the following:
+```
+Section "Module"
+    Load "modesetting"
+EndSection
+
+Section "Device"
+    Identifier "nvidia"
+    Driver "nvidia"
+    BusID "PCI:X:Y:Z"
+    Option "AllowEmptyInitialConfiguration"
+EndSection
+
+# Section "Device"
+#     Identifier "intel"
+#     Driver "modesetting"
+#     BusID "PCI:X:Y:Z"
+#     Option "AllowEmptyInitialConfiguration"
+# EndSection
+```
+
+*Where "BusID" X:Y:Z are the shortened/truncated numbers from the ID
+gathered above. For example, if the output of `lspci -nnk | grep -i
+'VGA|3d'` displayed a PCI ID of 09:00.0, the BusID entry would read:
+BusID "9:0:0"*
+
+3. Add/create a custom script, `/usr/local/bin/switch_nvidia.sh`:
+```
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+xrandr --dpi 96
+```
+4. Make the script executable:
+
+`chmod +x /usr/local/bin/switch_nvidia.sh`
+
+5. Configure your desired display manager to use a setup script during display setup. 
+
+Configure LightDM
+
+6. Modify lightdm's configuration and add (if one doesn't already exist)
+a SeatDefaults section & script config. For Debian, lightdm config file
+is in `/etc/lightdm/lightdm.conf`
+
+```
+[SeatDefaults]
+display-setup-script=/usr/local/bin/switch_nvidia.sh
+``` 
+7. Update: `systemctl restart lightdm.service`
+
+**Get back to Intel Video Card**
+
+Go to step **2.** and change the no comment lines `Section
+"Device"`. After go to step **6.** and comment the line with
+`display-setup-script=/usr/local/bin/switch_nvidia.sh`. Repeat step **7.**
 
 ## OpenGL
 
@@ -158,6 +233,8 @@ glxgears -info # testa frames/s
 xrandr --listproviders
 ```
 
+`lsmod | grep -i nvidia` #modulos
+`glxinfo|egrep "OpenGL vendor|OpenGL renderer"`
 
 # wifi card
 
