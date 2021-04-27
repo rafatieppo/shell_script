@@ -5,6 +5,7 @@ google-api-python-client
 gpxpy
 grass-session
 flask
+flake8
 folium
 icalendar
 importmagic
