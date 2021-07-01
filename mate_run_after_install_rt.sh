@@ -39,29 +39,6 @@ fi
 #    /usr/share/doc/libdvdread4/install-css.sh
 #fi
 
-echo -------------------------------------------------------------------
-echo It is for Ubuntu 16: Install R [ 1/0 ]? 
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-#Add following entry
-    add-apt-repository 'deb http://cran.rstudio.com/bin/linux/ubuntu trusty/' 
-#Add the Public Keys
-    gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 &&
-    gpg -a --export E084DAB9 | sudo apt-key add - &&
-    apt-get update &&
-    apt-get upgrade &&
-    apt-get install r-base
-fi
-
-echo -------------------------------------------------------------------
-echo It is for Ubuntu 18: Install R [ 1/0 ]?
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-#Add following entry
-     sudo apt-get install r-base
-fi
 
 echo -------------------------------------------------------------------
 echo Install rgdal [ 1/0 ]?
@@ -110,7 +87,7 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install mores extra fonts ? [ 1/0 ]
+echo Install biber ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
@@ -136,80 +113,6 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install python-dev ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-## To suport pandoc-fignos setup
-    apt-get install python-dev
-fi
-
-echo -------------------------------------------------------------------
-echo Install PIP3 for virtual env python 3 ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install install python3-pip
-fi
-
-
-sudo apt-get -y install python3-pip
-sudo apt-get install python-pip
-sudo apt install ubuntu-software
-sudo apt install openjdk-11
-
-
-
-
-
-
-
-
-
-
-echo -------------------------------------------------------------------
-echo ATTENTION now install virtual env python 3 ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo -H pip3 install virtualenv 
-fi
-
-echo -------------------------------------------------------------------
-echo Install font manager ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install font-manager
-fi
-
-echo -------------------------------------------------------------------
-echo Install Gparted? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo apt-get install gparted
-fi
-
-echo -------------------------------------------------------------------
-echo Install Unetbootin? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    sudo apt-get install unetbootin
-fi
-
-echo -------------------------------------------------------------------
-echo Install QGIS with GRASS ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-sudo apt-get update
-sudo apt-get install qgis python-qgis qgis-plugin-grass
-fi
-
-echo -------------------------------------------------------------------
 echo Install GIMP ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
@@ -218,9 +121,116 @@ sudo apt-get install gimp
 fi
 
 echo -------------------------------------------------------------------
-echo Install inkscape ? [ 1/0 ]
+echo Install Pandoc ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-sudo apt-get install inkscape
+    apt-get install pandoc
 fi
+
+echo -------------------------------------------------------------------
+echo Install Pandoc-citeproc ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install pandoc-citeproc
+fi
+
+echo -------------------------------------------------------------------
+echo Install python-dev ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install python-dev
+fi
+
+echo -------------------------------------------------------------------
+echo Install python-setuptools ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install python-setuptools
+fi
+
+echo -------------------------------------------------------------------
+echo Install python3-pip ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get -y install python3-pip
+fi
+
+echo -------------------------------------------------------------------
+echo Install python3-tk ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install python3-tk
+fi
+
+echo -------------------------------------------------------------------
+echo Install python3-env ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install python3-venv
+fi
+
+echo -------------------------------------------------------------------
+echo Install elpa-elpy ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt install elpa-elpy
+fi
+
+echo -------------------------------------------------------------------
+echo Install python3 jedi black yapf ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt install python3-jedi black yapf
+fi
+
+echo -------------------------------------------------------------------
+echo Install python-autopep8 ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install python-autopep8
+fi
+
+echo -------------------------------------------------------------------
+echo Install jupyter by pip3 ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    pip3 install jupyter
+fi
+
+echo -------------------------------------------------------------------
+echo Install jupyter-lab by pip3 ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    pip3 install jupyterlab
+fi
+
+echo -------------------------------------------------------------------
+echo Install rar ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install rar
+fi
+
+echo -------------------------------------------------------------------
+echo Install themes and icons ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install arch-theme numix-icon-theme adwaita-icon-theme mate-tweak
+fi
+
+
+
