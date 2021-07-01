@@ -197,7 +197,7 @@ echo Install python-autopep8 ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    apt-get install python-autopep8
+    apt-get install python3-autopep8
 fi
 
 echo -------------------------------------------------------------------
