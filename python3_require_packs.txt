@@ -5,6 +5,7 @@ google-api-python-client
 gpxpy
 grass-session
 flask
+flask-bootstrap
 flake8
 folium
 icalendar
@@ -15,6 +16,7 @@ networkx
 nltk
 numpy
 oauth2client
+openpyxl
 Pandas
 pandoc-eqnos
 pandoc-fignos
