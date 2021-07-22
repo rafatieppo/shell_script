@@ -13,21 +13,11 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install R [ 1/0 ]?
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-#Add following entry
-     apt-get install r-base
-fi
-
-
-echo -------------------------------------------------------------------
 echo Install ess [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    sudo apt-get install ess
+    apt-get install ess
 fi
 
 echo -------------------------------------------------------------------
@@ -51,7 +41,7 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install mores extra fonts ? [ 1/0 ]
+echo Install biber ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
@@ -81,7 +71,6 @@ echo Install Gimp ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-#    apt-get install --reinstall ttf-mscorefonts-installer &&
     apt-get install gimp
 fi
 
@@ -101,7 +90,6 @@ if [ $opcao -eq 1 ] ; then
     apt-get install pandoc-citeproc
 fi
 
-
 echo -------------------------------------------------------------------
 echo Install python-dev ? [ 1/0 ]
 echo -------------------------------------------------------------------
@@ -116,70 +104,6 @@ echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
     apt-get install python-setuptools
-fi
-
-echo -------------------------------------------------------------------
-echo Install font manager ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install font-manager
-fi
-
-echo -------------------------------------------------------------------
-echo Install rar ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install rar
-fi
-
-echo -------------------------------------------------------------------
-echo Install themes and icons ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install arch-theme numix-icon-theme adwaita-icon-theme mate-tweak
-fi
-
-echo -------------------------------------------------------------------
-echo Install ADAPTA themes and icons 659 MB in disk ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install adapta-gtk-theme
-fi
-
-echo -------------------------------------------------------------------
-echo Install QGIS ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install qgis
-fi
-
-echo -------------------------------------------------------------------
-echo Install GRASS ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install grass
-fi
-
-echo -------------------------------------------------------------------
-echo Install GRASS-GUI ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install grass-gui
-fi
-
-echo -------------------------------------------------------------------
-echo Install GRASS-DEV ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install grass-dev
 fi
 
 echo -------------------------------------------------------------------
@@ -207,19 +131,11 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install python-autopep8 ? [ 1/0 ]
+echo Install python3-jedi black autopep8 yapf3 ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    apt install elpa-elpy
-fi
-
-echo -------------------------------------------------------------------
-echo Install python-autopep8 ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt install python3-jedi black yapf
+    apt install python3-jedi black python3-autopep8 yapf3 python3-yapf
 fi
 
 echo -------------------------------------------------------------------
@@ -228,6 +144,14 @@ echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
     apt-get install python-autopep8
+fi
+
+echo -------------------------------------------------------------------
+echo Install elpa-elpy ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt install elpa-elpy
 fi
 
 echo -------------------------------------------------------------------
@@ -246,9 +170,35 @@ if [ $opcao -eq 1 ] ; then
     pip3 install jupyterlab
 fi
 
+echo -------------------------------------------------------------------
+echo Install rar ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install rar
+fi
 
+echo -------------------------------------------------------------------
+echo Install themes and icons ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install arch-theme numix-icon-theme adwaita-icon-theme mate-tweak
+fi
 
+echo -------------------------------------------------------------------
+echo Install ADAPTA themes and icons 659 MB in disk ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install adapta-gtk-theme
+fi
 
-
-
+echo -------------------------------------------------------------------
+echo Install font manager ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install font-manager
+fi
 
