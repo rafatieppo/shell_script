@@ -10,6 +10,7 @@ flake8
 folium
 icalendar
 importmagic
+ipykernel
 lxml
 matplotlib
 networkx
@@ -23,8 +24,10 @@ pandoc-fignos
 pandoc-tablenos
 pep8
 plotly_express
+rope
 Pweave
 pyshp
+python-language-server[all]
 requests
 seaborn
 sklearn
@@ -33,3 +36,4 @@ tabulate
 virtualenv
 xlrd
 yapf
+yapf3

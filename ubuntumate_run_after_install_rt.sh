@@ -185,19 +185,11 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Install python3 jedi black yapf ? [ 1/0 ]
+echo Install python3 jedi black autopep8 yapf3 ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    apt install python3-jedi black yapf
-fi
-
-echo -------------------------------------------------------------------
-echo Install python-autopep8 ? [ 1/0 ]
-echo -------------------------------------------------------------------
-read opcao
-if [ $opcao -eq 1 ] ; then
-    apt-get install python3-autopep8
+    apt install python3-jedi black python3-autopep8 yapf3 python3-yapf
 fi
 
 echo -------------------------------------------------------------------
