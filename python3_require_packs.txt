@@ -36,4 +36,3 @@ tabulate
 virtualenv
 xlrd
 yapf
-yapf3
