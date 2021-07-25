@@ -32,6 +32,7 @@ requests
 seaborn
 sklearn
 shapely
+sympy
 tabulate
 virtualenv
 xlrd
