@@ -3,12 +3,19 @@
 This folder keeps shell scripts to make Linux setup easier and others
 routines as well.
 
-## debian_run_after_install_rt.sh
+## debian_after_install_a_base.sh
 
-- Install some useful software for diary work.
+- Install some useful software for daily work.
 - by @rafatieppo
 - In Debian 10 you need super user, run as follows:
-    `su `
+    `su -`
+
+## debian_after_install_b_python.sh
+
+- Install python stuff (setup tools, pip3 ...).
+- by @rafatieppo
+- In Debian 10 you need super user, run as follows:
+    `su -`
 
 ## github_config_rt.sh
 
@@ -19,6 +26,7 @@ routines as well.
 
 ## pandoc_filters_get_install_rt.sh
 
+- Its not necessary for now, I am using pip3 to install pandoc filters
 - Just GET **PANDOC FILTERS**
 - It was developed by @rafatieppo
 - Super user is no mandatory
@@ -40,9 +48,10 @@ routines as well.
 - by @rafatieppo
 - You need super user
 
-## python3_pip3_lib.sh
+## python3_run_pip3_lib.sh
 
-- instal libriries by means pip3 from fr
+- instal libraries by means pip3
+- Do not forget to create a environment to install
 - no require sudo (to install in `/home`)
 
 ## xubuntu_run_after_install_rt.sh
@@ -50,6 +59,13 @@ routines as well.
 - Install some useful software for diary work.
 - It's from @fernandomayer and modified by @rafatieppo
 - It demands super user to run
+
+## txt files
+
+- Each file is a list with pack to install into a specific environment
+  - python3_list_basic_packs.txt
+  - python3_list_geo_packs.txt
+  - python3_list_packs.txt
 
 ## LICENSE
 
