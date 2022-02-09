@@ -99,6 +99,14 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
+echo Install vlc \(codecs videos\) ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install vlc
+fi
+
+echo -------------------------------------------------------------------
 echo Install mate twek, themes and icons ? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
