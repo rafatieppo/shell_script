@@ -3,7 +3,7 @@
 # new version 2022-02-13, by @rafatieppo
 
 echo -------------------------------------------------------------------
-echo Write QGIS repository in /etc/apt/sources.list.d/qgislts_repo.list  for Debian? [ 1/0 ]
+echo Write QGIS repository in /etc/apt/sources.list.d/qgislts_repo.list for Debian Bullseye? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
@@ -11,7 +11,7 @@ echo -e "deb https://qgis.org/debian-ltr bullseye main \ndeb-src https://qgis.or
 fi
 
 echo -------------------------------------------------------------------
-echo Write QGIS-LTR repository in /etc/apt/sources.list.d/qgislts_repo.list  for Debian? [ 1/0 ]
+echo Get gpg key for GIS-LTR from https://qgis.org/downloads/qgis-2021.gpg.key? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
@@ -20,7 +20,15 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
-echo Would like to install QGIS GRASS etc? [ 1/0 ]
+echo Would like to install update repositories? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get update
+fi
+
+echo -------------------------------------------------------------------
+echo Would like to install QGIS GRASS SAGA? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then

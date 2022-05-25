@@ -11,7 +11,7 @@ echo "deb http://cloud.r-project.org/bin/linux/debian bullseye-cran40/" > /etc/a
 fi
 
 echo -------------------------------------------------------------------
-echo Install  key fingerprint 95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7 for R repository? [ 1/0 ]
+echo Get key fingerprint 95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7 for R repository? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
