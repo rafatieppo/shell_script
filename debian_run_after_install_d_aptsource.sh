@@ -20,3 +20,29 @@ if [ $opcao -eq 1 ] ; then
 echo  "deb https://qgis.org/debian-ltr bullseye main \ndeb-src https://qgis.org/debian-ltr bullseye main" > /etc/apt/sources.list.d/qgislts_repo.list 
 fi
 
+echo -------------------------------------------------------------------
+echo Would like to install update repositories? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get update
+fi
+
+echo -------------------------------------------------------------------
+echo Would like to install r-base? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install r-base r-base-dev
+fi
+
+echo -------------------------------------------------------------------
+echo Would like to install QGIS GRASS etc? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install qgis python-qgis qgis-plugin-grass saga
+    sudo apt-get install grass-gui
+    sudo apt-get install grass-dev
+fi
+
