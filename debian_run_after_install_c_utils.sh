@@ -1,5 +1,5 @@
 #!/bin/bash
-# for Debian (Ubuntu Mate Xfce) - python stuff
+# for Debian (Ubuntu Mate Xfce) - extras stuff
 # new version 2022-02-13, by @rafatieppo
 
 echo -------------------------------------------------------------------

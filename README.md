@@ -17,6 +17,34 @@ routines as well.
 - In Debian 10 you need super user, run as follows:
     `su -`
 
+## debian_after_install_c_python.sh
+
+- Install some utils stuff (imagemagick, ...).
+- by @rafatieppo
+- In Debian 10 you need super user, run as follows:
+    `su -`
+
+## debian_after_install_x_qgislts.sh
+
+- Write repository in `/etc/apt/source.list.d/qgislts_repo.list` for Debian Buster
+- Install gpg key for QGIS LTS
+- Update repositories
+- Install QGIS GRASS SAGA for Debian Buster
+
+## debian_after_install_x_rbase.sh
+
+- Write repository in `/etc/apt/source.list.d/rbase_repo.list` for Debian Buster
+- Install gpg key for QGIS LTS
+- Update repositories
+- Install R-base for Debian Buster
+
+## debian_change_gpucard.sh
+
+- Change gpu card for Debian Buster
+- It is for Avell-A52 laptop 
+- In this case there an *Intel Corporation CoffeeLake-H GT2 [UHD Graphics 630]* and *VIDIA Corporation GP107M [GeForce GTX 1050 3 GB Max-Q]*
+- It demands x11-xserver-utils, for more details check [HERE](https://rafatieppo.github.io/post/2020_05_25_debian_nvidia/)
+
 ## github_config_rt.sh
 
 - Install and configure **GITHUB**
