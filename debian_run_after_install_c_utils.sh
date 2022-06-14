@@ -10,5 +10,13 @@ if [ $opcao -eq 1 ] ; then
     apt install imagemagick
 fi
 
+echo -------------------------------------------------------------------
+echo Install Cheese WebCam? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt install cheese
+fi
+
 echo ------------------------------------------------------------
 echo ends here.
