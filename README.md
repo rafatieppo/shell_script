@@ -3,6 +3,13 @@
 This folder keeps shell scripts to make Linux setup easier and others
 routines as well.
 
+## debian_change_gpucard.sh
+
+- Change gpu card for Debian Buster
+- It is for Avell-A52 laptop 
+- In this case there an *Intel Corporation CoffeeLake-H GT2 [UHD Graphics 630]* and *VIDIA Corporation GP107M [GeForce GTX 1050 3 GB Max-Q]*
+- It demands x11-xserver-utils, for more details check [HERE](https://rafatieppo.github.io/post/2020_05_25_debian_nvidia/)
+
 ## debian_after_install_a_base.sh
 
 - Install some useful software for daily work.
@@ -37,13 +44,6 @@ routines as well.
 - Install gpg key for QGIS LTS
 - Update repositories
 - Install R-base for Debian Buster
-
-## debian_change_gpucard.sh
-
-- Change gpu card for Debian Buster
-- It is for Avell-A52 laptop 
-- In this case there an *Intel Corporation CoffeeLake-H GT2 [UHD Graphics 630]* and *VIDIA Corporation GP107M [GeForce GTX 1050 3 GB Max-Q]*
-- It demands x11-xserver-utils, for more details check [HERE](https://rafatieppo.github.io/post/2020_05_25_debian_nvidia/)
 
 ## github_config_rt.sh
 
@@ -87,6 +87,23 @@ routines as well.
 - Install some useful software for diary work.
 - It's from @fernandomayer and modified by @rafatieppo
 - It demands super user to run
+
+
+## xubuntu_run_after_install_rt.sh
+
+- Install some useful software for diary work.
+- It's from @fernandomayer and modified by @rafatieppo
+- It demands super user to run
+
+## tcx_polar_to_garmin.sh
+
+- remove tags (Author Cretor) from `tcx` files to import in Garmin Connect
+- created by @rafatieppo
+- date: 2022-08-09
+- how to run
+    - copy all `.tcx` or `.TCX` files and `tcx_polar_to_garmin.sh` in a same folder
+    - give permission as exec for `tcx_polar_to_garmin.sh` 
+    - run `./tcx_polar_to_garmin.sh` 
 
 ## txt files
 
