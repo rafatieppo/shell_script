@@ -32,8 +32,8 @@ echo Would like to install QGIS GRASS SAGA? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    apt-get install qgis python-qgis qgis-plugin-grass saga
-    sudo apt-get install grass-gui
-    sudo apt-get install grass-dev
+    apt install qgis python-qgis qgis-plugin-grass saga
+    apt-get install grass-gui
+    apt-get install grass-dev
 fi
 
