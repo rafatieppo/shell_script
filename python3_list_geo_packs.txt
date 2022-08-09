@@ -1,8 +1,10 @@
+wheel
 autopep8
 beautifulsoup4
 datetime
 gpxpy
 grass-session
+grass-script
 flask
 flask-bootstrap
 flake8
@@ -26,6 +28,7 @@ rope
 Pweave
 pyshp
 python-language-server[all]
+python-lsp-server
 requests
 seaborn
 sklearn
