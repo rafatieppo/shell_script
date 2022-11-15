@@ -20,7 +20,6 @@ numpy
 oauth2client
 openpyxl
 Pandas
-geopandas
 pandoc-eqnos
 pandoc-fignos
 pandoc-tablenos
