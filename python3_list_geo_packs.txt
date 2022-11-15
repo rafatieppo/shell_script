@@ -19,11 +19,7 @@ numpy
 oauth2client
 openpyxl
 Pandas
-pandoc-eqnos
-pandoc-fignos
-pandoc-tablenos
 pep8
-plotly_express
 rope
 Pweave
 pyshp
@@ -31,9 +27,7 @@ python-language-server[all]
 python-lsp-server
 requests
 seaborn
-sklearn
 shapely
-sympy
 tabulate
 virtualenv
 xlrd
