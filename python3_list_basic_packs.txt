@@ -4,7 +4,6 @@ beautifulsoup4
 datetime
 google-api-python-client
 google_auth_oauthlib
-gpxpy
 grass-session
 flask
 flask-bootstrap

@@ -2,7 +2,6 @@ wheel
 autopep8
 beautifulsoup4
 datetime
-gpxpy
 grass-session
 grass-script
 flask
