@@ -1,22 +1,26 @@
 #!/bin/bash
 # for Debian - Install QGIS
-# new version 2022-02-13, by @rafatieppo
+# new version 2022-12-21, by @rafatieppo
 
 echo -------------------------------------------------------------------
 echo Write QGIS repository in /etc/apt/sources.list.d/qgislts_repo.list for Debian Bullseye? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-echo -e "deb https://qgis.org/debian-ltr bullseye main \ndeb-src https://qgis.org/debian-ltr bullseye main" > /etc/apt/sources.list.d/qgislts_repo.list 
+echo -e "# qgis \nTypes: deb deb-src \nURIs: https://qgis.org/debian \nSuites: bullseye \nArchitectures: amd64 \nComponents: main \nSigned-By: /etc/apt/keyrings/qgis-archive-keyring.gpg" > /etc/apt/sources.list.d/qgis.sources 
 fi
 
 echo -------------------------------------------------------------------
-echo Get gpg key for GIS-LTR from https://qgis.org/downloads/qgis-2021.gpg.key? [ 1/0 ]
+echo Get gpg key for GIS from https://download.qgis.org/downloads/qgis-archive-keyring.gpg? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
-    chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+    if [ ! -d "$/etc/apt/keyrings"]; then
+        pathvar='/etc/apt/keyrings'
+        mkdir -p "$pathvar"
+    fi
+    wget https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+    mv qgis-archive-keyring.gpg /etc/apt/keyrings/qgis-archive-keyring.gpg
 fi
 
 echo -------------------------------------------------------------------
