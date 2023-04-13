@@ -26,7 +26,7 @@ pyshp
 python-language-server[all]
 python-lsp-server
 requests
-seaborn
+scikit-learn
 shapely
 tabulate
 virtualenv
