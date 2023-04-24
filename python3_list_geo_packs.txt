@@ -26,6 +26,7 @@ pyshp
 python-language-server[all]
 python-lsp-server
 requests
+scipy
 scikit-learn
 shapely
 tabulate
