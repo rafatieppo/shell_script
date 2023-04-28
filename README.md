@@ -41,16 +41,24 @@ routines as well.
 ## debian_after_install_x_rbase.sh
 
 - Write repository in `/etc/apt/source.list.d/rbase_repo.list` for Debian Buster
-- Install gpg key for QGIS LTS
+- Install gpg key
 - Update repositories
 - Install R-base for Debian Buster
+- Super user is mandatory
+
+## debian_install_qgis.sh
+
+- Write repository in `/etc/apt/source.list.d/qgis.sources` for Debian 
+- Install gpg key
+- Update repositories
+- Install qgis python-qgis qgis-plugin-grass saga grass-gui grass-dev
+- Super user is mandatory
 
 ## github_config_rt.sh
 
 - Install and configure **GITHUB**
 - It's from @fernandomayer and modified by @rafatieppo
 - Super user is no mandatory
-- no debian instalar como `su` e NAO `su -`
 
 ## pandoc_filters_get_install_rt.sh
 
@@ -82,12 +90,11 @@ routines as well.
 - Do not forget to create a environment to install
 - no require sudo (to install in `/home`)
 
-## xubuntu_run_after_install_rt.sh
+## ubuntumate_run_after_install_rt.sh
 
 - Install some useful software for diary work.
 - It's from @fernandomayer and modified by @rafatieppo
 - It demands super user to run
-
 
 ## xubuntu_run_after_install_rt.sh
 
