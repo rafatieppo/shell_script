@@ -31,12 +31,14 @@ routines as well.
 - In Debian 10 you need super user, run as follows:
     `su -`
 
-## debian_after_install_x_qgislts.sh
+## debian_after_install_x_qgis.sh
 
-- Write repository in `/etc/apt/source.list.d/qgislts_repo.list` for Debian Buster
-- Install gpg key for QGIS LTS
+- Write repository in `/etc/apt/source.list.d/qgis.sources` for Debian 
+- Install gpg key
 - Update repositories
-- Install QGIS GRASS SAGA for Debian Buster
+- Install qgis python-qgis qgis-plugin-grass saga grass-gui grass-dev
+- Edit if you desire LTR qgis version
+- Super user is mandatory
 
 ## debian_after_install_x_rbase.sh
 
@@ -44,14 +46,6 @@ routines as well.
 - Install gpg key
 - Update repositories
 - Install R-base for Debian Buster
-- Super user is mandatory
-
-## debian_install_qgis.sh
-
-- Write repository in `/etc/apt/source.list.d/qgis.sources` for Debian 
-- Install gpg key
-- Update repositories
-- Install qgis python-qgis qgis-plugin-grass saga grass-gui grass-dev
 - Super user is mandatory
 
 ## github_config_rt.sh
