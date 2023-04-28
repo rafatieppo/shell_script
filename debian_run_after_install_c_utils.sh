@@ -1,6 +1,22 @@
 #!/bin/bash
-# for Debian (Ubuntu Mate Xfce) - extras stuff
+# for Debian mate (Ubuntu Mate) - extras stuff
 # new version 2022-02-13, by @rafatieppo
+
+echo -------------------------------------------------------------------
+echo Install caja-dropbox caja-openterminal? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get -y install caja-dropbox caja-open-terminal
+fi
+
+echo -------------------------------------------------------------------
+echo Install CURL? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get -y install curl
+fi
 
 echo -------------------------------------------------------------------
 echo Install TMUX ? [ 1/0 ]

@@ -27,6 +27,7 @@ routines as well.
 ## debian_after_install_c_python.sh
 
 - Install some utils stuff (imagemagick, ...).
+- imagemagick, curl, caja-dropbox, caja-open-terminal, tmux, cups, printer drivers, cheese webcam
 - by @rafatieppo
 - In Debian 10 you need super user, run as follows:
     `su -`
