@@ -85,7 +85,7 @@ if [ $opcao -eq 1 ] ; then
     else
         echo "dir ${pathvar}keyrings/ does NOT exists, creating ..."
         mkdir -p "${pathvar}keyrings/"
-        mv "$./qgis-archive-keyring.gpg" "${pathvar}keyrings/qgis-archive-keyring.gpg"
+        mv "./qgis-archive-keyring.gpg" "${pathvar}keyrings/qgis-archive-keyring.gpg"
         echo -e "file has been moved\n"
     fi
 fi
