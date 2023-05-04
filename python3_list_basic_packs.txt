@@ -33,6 +33,7 @@ python-language-server[all]
 requests
 seaborn
 scipy
+scikit-learn
 shapely
 streamlit
 tabulate
