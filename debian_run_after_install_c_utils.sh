@@ -67,5 +67,13 @@ if [ $opcao -eq 1 ] ; then
     apt install cheese
 fi
 
+echo -------------------------------------------------------------------
+echo Install Simple-scan? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt install simple-scan
+fi
+
 echo ------------------------------------------------------------
 echo ends here.
