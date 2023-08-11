@@ -3,6 +3,10 @@
 This folder keeps shell scripts to make Linux setup easier and others
 routines as well.
 
+## python_create_folders_venvs
+
+- creates folder for python environments `.virtualenvs/venv_basic` etc
+
 ## debian_change_gpucard.sh
 
 - Change gpu card for Debian Buster
