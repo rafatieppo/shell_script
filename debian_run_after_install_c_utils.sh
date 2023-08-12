@@ -2,12 +2,14 @@
 # for Debian mate (Ubuntu Mate) - extras stuff
 # new version 2022-02-13, by @rafatieppo
 
+
+
 echo -------------------------------------------------------------------
-echo Install caja-dropbox caja-openterminal? [ 1/0 ]
+echo Install software-properties-gtk (to instal non-free prop - nvidia)? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    apt-get -y install caja-dropbox caja-open-terminal
+    apt install software-properties-gtk
 fi
 
 echo -------------------------------------------------------------------
