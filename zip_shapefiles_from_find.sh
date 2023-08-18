@@ -7,7 +7,7 @@
 # Version: 1
 # License: MIT License
 # Requisites: shell, egrep, sed
-# Tags: shell, linux, regex, zip
+# Tags: shell, linux, regex, zip, shape
 # ------------------------------------------------------------
 
 # step 01 - list all shp files
