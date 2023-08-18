@@ -118,6 +118,13 @@ routines as well.
   - python3_list_geo_packs.txt
   - python3_list_packs.txt
 
+## zip_shape_files_from_find
+
+- zip file from find command
+- created by @rafatieppo
+- date: 2023-08-18
+- create separated zip files for all shape files in a folder
+
 ## LICENSE
 
 See [MIT LICENSE](https://github.com/rafatieppo/SHELL_SCRIPT/blob/master/LICENSE.md)
