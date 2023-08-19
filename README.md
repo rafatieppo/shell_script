@@ -88,6 +88,7 @@ routines as well.
 - instal libraries by means pip3
 - Do not forget to create a environment to install
 - no require sudo (to install in `/home`)
+- created by @rafatieppo
 
 ## ubuntumate_run_after_install_rt.sh
 
@@ -124,6 +125,13 @@ routines as well.
 - created by @rafatieppo
 - date: 2023-08-18
 - create separated zip files for all shape files in a folder
+
+## unzip_cp_rm_folders
+
+- unzip, cp, rm folders from zip files
+- created by @rafatieppo
+- Data from CAR 2023 have a folder (AREA_IMOVEL) into a zipped files, its necessary extract the shapes into this folder
+
 
 ## LICENSE
 
