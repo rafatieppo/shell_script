@@ -54,7 +54,8 @@ echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
     apt-get install -y ttf-bitstream-vera ttf-dejavu fonts-inconsolata \
-	ttf-liberation fonts-linuxlibertine 
+	ttf-liberation fonts-linuxlibertine \
+	texlive-fonts-extra 
 fi
 
 echo -------------------------------------------------------------------
