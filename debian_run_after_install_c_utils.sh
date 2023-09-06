@@ -77,5 +77,13 @@ if [ $opcao -eq 1 ] ; then
     apt install simple-scan
 fi
 
+echo -------------------------------------------------------------------
+echo Install bluetooth drivers jbl? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get install bluetooth bluez bluez-tools rfkill
+fi
+
 echo ------------------------------------------------------------
 echo ends here.
