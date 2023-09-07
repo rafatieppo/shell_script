@@ -2,7 +2,7 @@
 # ------------------------------------------------------------
 # Goal: zip file from find command
 # useful
-# Author @rafatieppo <rafaeltieppo (a) yahoo com br
+# Author @rafatieppo <rafaeltieppo (a) yahoo com br>
 # Since: 2023-08-09
 # Version: 1
 # License: MIT License
@@ -21,16 +21,15 @@ else
         # list all files for ONE shape
         echo "working on shapefile geometry $shpfile"
         echo "------------------------------------------------------------"
-        # removing "./"
+        # removing "./" from path file
         fn=$(sed -E "s/\.\///" <<< $shpfile);
-        # removing .shp
+        # removing ".shp" from path file
         fn_noext=$(echo $fn | sed -e 's/.shp//');
         # list all files for geometry
         lsfiles_shp=$(ls ${fn_noext}.*);
         echo "$lsfiles_shp"
         ls ${fn_noext}.* | zip -@ "${fn_noext}.zip"
         echo "${fn_noext}.zip" "has been writed"
-        #echo "" $fn_noext
         echo "------------------------------------------------------------"
     done
 echo "Its Done."
