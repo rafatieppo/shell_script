@@ -16,12 +16,12 @@ lsfiles=$(find . | egrep  ".*\.(tcx|TCX)")
 lstcx=($lsfiles)
 
 for tcxfile in "${lstcx[@]}"; do
-    # remove tag Creator
+    # remove tag Author
     echo "------------------------------------------------------------"
     echo "working on: " $tcxfile
     cls_auth=$(sed -e 's/<Auth.*\/Author>//' <<< echo $tcxfile);
     noauthor=$(echo $cls_auth);
-    # remove tag Author
+    # remove tag Creator
     cls_authcreat=$(echo $noauthor | sed -e 's/<Creat.*\/Creator>//');
     # write file
     begifile=$(sed -E 's/.TCX|.tcx//' <<< $tcxfile)
@@ -30,4 +30,3 @@ for tcxfile in "${lstcx[@]}"; do
     echo "$begifile$endsfile" "has been writed"
     echo "------------------------------------------------------------"
     done
-               
