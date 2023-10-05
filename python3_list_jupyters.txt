@@ -1,3 +1,5 @@
 wheel
 jupyter
 jupyterlab
+python-language-server
+pyright
