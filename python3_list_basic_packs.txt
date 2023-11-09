@@ -1,5 +1,4 @@
 wheel
-autopep8
 beautifulsoup4
 datetime
 google-api-python-client
@@ -7,7 +6,6 @@ google_auth_oauthlib
 grass-session
 flask
 flask-bootstrap
-flake8
 folium
 icalendar
 importmagic
@@ -24,12 +22,9 @@ Pandas
 pandoc-eqnos
 pandoc-fignos
 pandoc-tablenos
-pep8
 plotly_express
-rope
 Pweave
 pylint
-python-language-server[all]
 requests
 seaborn
 scipy
@@ -39,4 +34,3 @@ streamlit
 tabulate
 virtualenv
 xlrd
-yapf

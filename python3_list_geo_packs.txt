@@ -1,12 +1,10 @@
 wheel
-autopep8
 beautifulsoup4
 datetime
 grass-session
 grass-script
 flask
 flask-bootstrap
-flake8
 folium
 importmagic
 ipykernel
@@ -19,12 +17,8 @@ oauth2client
 openpyxl
 Pandas
 geopandas
-pep8
-rope
 Pweave
 pyshp
-python-language-server[all]
-python-lsp-server
 requests
 scipy
 scikit-learn
@@ -32,4 +26,3 @@ shapely
 tabulate
 virtualenv
 xlrd
-yapf
