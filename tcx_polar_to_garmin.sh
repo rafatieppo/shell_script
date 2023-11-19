@@ -11,8 +11,8 @@
 # ------------------------------------------------------------
 
 # step 01 - list all TCX or tcx files
-# find ./ | egrep  ".*\.(tcx|TCX)" > list_tcx_files
-lsfiles=$(find . | egrep  ".*\.(tcx|TCX)")
+# find ./ | grep -E ".*\.(tcx|TCX)" > list_tcx_files
+lsfiles=$(find . | grep -E  ".*\.(tcx|TCX)")
 lstcx=($lsfiles)
 
 for tcxfile in "${lstcx[@]}"; do
