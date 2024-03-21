@@ -1,7 +1,6 @@
 #!/bin/bash
-# for Debian mate (Ubuntu Mate) - extras stuff
-# new version 2022-02-13, by @rafatieppo
-
+# for Debian - extras stuff
+# new version 2024-03-21, by @rafatieppo
 
 
 echo -------------------------------------------------------------------
@@ -18,6 +17,14 @@ echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
     apt-get -y install curl
+fi
+
+echo -------------------------------------------------------------------
+echo Install Alacritty ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get -y install alacritty
 fi
 
 echo -------------------------------------------------------------------
