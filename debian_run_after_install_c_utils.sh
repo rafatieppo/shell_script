@@ -89,7 +89,7 @@ echo Install bluetooth drivers jbl? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
 if [ $opcao -eq 1 ] ; then
-    apt-get install bluetooth bluez bluez-tools rfkill
+    apt-get install bluetooth bluez bluez-tools rfkill bluez-firmware 
 fi
 
 echo ------------------------------------------------------------
