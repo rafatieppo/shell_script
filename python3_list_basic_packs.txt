@@ -1,6 +1,7 @@
 wheel
 beautifulsoup4
 datetime
+geopandas
 google-api-python-client
 google_auth_oauthlib
 grass-session

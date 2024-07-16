@@ -1,5 +1,13 @@
 wheel
 jupyter
 jupyterlab
+jupyterlab-lsp
 python-language-server
 pyright
+autopep8
+mccabe
+pydocstyle
+pyflakes
+pylint
+rope
+yapf
