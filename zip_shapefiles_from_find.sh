@@ -28,6 +28,7 @@ else
         # list all files for geometry
         lsfiles_shp=$(ls ${fn_noext}.*);
         echo "$lsfiles_shp"
+        # -@  read names from stdin
         ls ${fn_noext}.* | zip -@ "${fn_noext}.zip"
         echo "${fn_noext}.zip" "has been writed"
         echo "------------------------------------------------------------"
