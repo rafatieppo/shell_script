@@ -36,6 +36,14 @@ if [ $opcao -eq 1 ] ; then
 fi
 
 echo -------------------------------------------------------------------
+echo Install MICRO text editor ? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt-get -y install micro
+fi
+
+echo -------------------------------------------------------------------
 echo Install SYSTEM-CONFIG-PRINTER? [ 1/0 ]
 echo -------------------------------------------------------------------
 read opcao
