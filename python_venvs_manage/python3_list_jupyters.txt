@@ -1,0 +1,16 @@
+wheel
+jupyter
+jupyterlab
+jupyterlab-lsp
+python-language-server
+pyright
+autopep8
+mccabe
+pandoc-eqnos
+pandoc-fignos
+pandoc-tablenos
+pydocstyle
+pyflakes
+pylint
+rope
+yapf

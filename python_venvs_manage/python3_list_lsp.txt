@@ -1,0 +1,6 @@
+wheel
+pyright
+python-lsp-server
+python-lsp-server[rope]
+python-lsp-server[autopep8]
+python-lsp-server[yapf]
