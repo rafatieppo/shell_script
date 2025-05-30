@@ -1,0 +1,45 @@
+name: vconda_geo # This will become the name of your environment
+dependencies: # The list of packages to include in your environment
+    - python=3.12 # You can specify versions
+    - conda-forge::python-magic
+    - python-lsp-server                       # python lsp    
+    - conda-forge::pyright                    # python lsp
+    - ruff                                    # python lsp
+    - conda-forge::opencv
+    - beautifulsoup4
+    - folium
+    - ipykernel
+    - lxml
+    - matplotlib
+    - networkx
+    - nltk
+    - numpy
+    - oauth2client
+    - openpyxl
+    - Pandas
+    - geopandas
+    - requests
+    - scipy
+    - scikit-learn
+    - shapely
+    - streamlit
+    - tabulate
+    - xlrd
+    - jupyter
+    - jupyterlab
+    - jupyterlab-lsp
+    - autopep8
+    - mccabe
+    - pydocstyle
+    - pyflakes
+    - pylint
+    - rope
+    - yapf
+    - pip # Install pip in your environment
+    - pip: # Include pip dependencies last
+        - flask
+        - flask-bootstrap
+        - Flask-Testing
+        - pandoc-eqnos
+        - pandoc-fignos
+        - pandoc-tablenos
