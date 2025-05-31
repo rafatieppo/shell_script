@@ -3,13 +3,20 @@ dependencies: # The list of packages to include in your environment
     - python=3.12 # You can specify versions
     - beautifulsoup4
     - geopandas
+    - anaconda::jinja2
     - conda-forge::google-api-python-client
     - conda-forge::google-auth-oauthlib
+    - conda-forge::pillow
+    - conda-forge::plotly
     - conda-forge::python-magic
+    - conda-forge::selenium
+    - conda-forge::sqlite
     - python-lsp-server          # python lsp    
     - conda-forge::pyright                    # python lsp
     - ruff                                    # python lsp
+    - beautifulsoup4
     - folium
+    - geopandas    
     - icalendar
     - ipykernel
     - lxml
@@ -21,6 +28,7 @@ dependencies: # The list of packages to include in your environment
     - openpyxl
     - conda-forge::opencv
     - Pandas
+    - plotly::plotly_express
     - Pweave
     - pylint
     - requests
