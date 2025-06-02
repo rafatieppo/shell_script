@@ -2,27 +2,27 @@
 
 All the files are in: [https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage](https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage)
 
-## File to create CONDA environment and install packages
+## Create CONDA environment and install packages from a script (YML)
 
 ### From a YML file
 
-1. install **miniconda** from: [https://www.anaconda.com/](https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer)
-2. Dowload the file `miniconda3_venv_basic.yml` in some directory. e.g. `~/Dowloads` .
-3. Into the `~/Download` dir run: `conda env create -f vconda_basic.yml` . It will create virtual a environment in `/home/rafatieppo/miniconda3/envs/vconda_basic` and install all the listed packages. There are others environments (files):
-  3. miniconda3\_vconda\_basic.yml
-  3. miniconda3\_vconda\_geo.yml
-  3. miniconda3\_vconda\_jupyters.yml
-  3. miniconda3\_vconda\_ml.yml
-4. Activate the new environment: `conda activate vconda_basic`
-5. Deactivate the environment: `conda deactivate`
-6. Verify that the new environment was installed correctly: `conda env list` or `conda info --envs`.
+- install **miniconda** from: [https://www.anaconda.com/](https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer) (follow the instructions)
+- Dowload the file `miniconda3_venv_basic.yml` in some directory. e.g. `~/Dowloads` .
+- Into the `~/Download` dir run: `conda env create -f vconda_basic.yml` . It will create virtual a environment in `/home/rafatieppo/miniconda3/envs/vconda_basic` and install all the listed packages. There are others environments (files):
+  - miniconda3\_vconda\_basic.yml
+  - miniconda3\_vconda\_geo.yml
+  - miniconda3\_vconda\_jupyters.yml
+  - miniconda3\_vconda\_ml.yml
+- To *Activate* the new environment: `conda activate vconda_basic`
+- To *Deactivate* the environment: `conda deactivate`
+- Verify that the new environment was installed correctly: `conda env list` or `conda info --envs`.
 
 To instal a spcecific package:
 
-1. Activate the new environment: `conda activate vconda_basic`
-2. Install the package: `conda install numpy=2.2.2` or `conda install numpy`
-3. Or update the package: `conda update <PACKAGE>`
-5. Deactivate the environment: `conda deactivate`
+- Activate the new environment: `conda activate vconda_basic`
+- Install the package: `conda install numpy=2.2.2` or `conda install numpy`
+- Or update the package: `conda update <PACKAGE>`
+- Deactivate the environment: `conda deactivate`
 
 ### From a MANUAL mode
 
