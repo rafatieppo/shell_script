@@ -8,7 +8,7 @@ All the files are in: [https://github.com/rafatieppo/shell_script/tree/master/py
 
 1. install **miniconda** from: [https://www.anaconda.com/](https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer)
 2. Dowload the file `miniconda3_venv_basic.yml` in some directory. e.g. `~/Dowloads` .
-3. Into the `~/Download` dir run: `conda env create -f vconda\_basic.yml` . It will create virtual a environment in `/home/rafatieppo/miniconda3/envs/vconda_basic` and install all the listed packages. There are others environments (files):
+3. Into the `~/Download` dir run: `conda env create -f vconda_basic.yml` . It will create virtual a environment in `/home/rafatieppo/miniconda3/envs/vconda_basic` and install all the listed packages. There are others environments (files):
   3. miniconda3\_vconda\_basic.yml
   3. miniconda3\_vconda\_geo.yml
   3. miniconda3\_vconda\_jupyters.yml
