@@ -37,9 +37,34 @@ conda create --name <ENVIRONMENT> python=<VERSION>
 conda install <PACKAGE_PATH/PACKAGE>.conda
 ```
 
-## Files to handle PIP environments
+
+## Create PIP (python) environment and install packages from a file
 
 ### List of packages for each environment
+
+First create the folder and the environment, e.g.:
+
+To create the folders:
+
+```
+python_create_folders_venvs.sh
+```
+
+To create the environment:
+
+```
+python3 -m venv /path/to/new/virtual/environment
+```
+
+Now, you need to activate the enviroment and install de packs:
+
+```
+source /path/to/new/virtual/environment activate
+
+pip3 install -r python3_list_basic_packs.txt 
+```
+
+Files to install packs:
 
 - python3\_list\_basic\_packs.txt
 - python3\_list\_geo\_packs.txt
@@ -49,5 +74,4 @@ conda install <PACKAGE_PATH/PACKAGE>.conda
 - python3\_list\_packs.txt
 - python\_create\_folders\_venvs.sh
 
-e.g.: `pip3 install -r python3_list_basic_packs.txt `
 
