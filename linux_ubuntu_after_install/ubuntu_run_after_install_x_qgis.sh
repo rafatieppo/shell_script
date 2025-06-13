@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------
-# Goal: install QGIS NO LTS on DEBIAN
+# Goal: install QGIS NO LTS on UBUNTU
 # Author @rafatieppo <rafaeltieppo (a) yahoo com br>
 # Since: 2023-04-03
 # Version: 1
