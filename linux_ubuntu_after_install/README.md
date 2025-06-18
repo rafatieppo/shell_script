@@ -62,6 +62,16 @@ Example Scenarios (last 3 columns denote swap space).
     - ir para driver opcinais
     - Escolher o mais recente, Se for RTX escolher OPEN KERNEL 
 
+- se ainda estiver com problemas:
+  - Step 1: Check Kernel Version
+    - `nvidia-smi / modinfo nvidia`
+  - Step 2: Remove the Nvidia Driver
+    - `sudo apt purge nvidia*`
+  - Step 3: Reinstall the Correct Driver (replace XXX)
+    - `sudo apt install nvidia-driver-XXX nvidia-settings nvidia-prime`
+  - Step 4: Reboot
+    - `sudo reboot`
+
 # BRTFS para manutencao sistema (nao deu certo)
 
 - `apt install btrfs-assistant`
@@ -71,7 +81,7 @@ configuracoes, abrir a gui Btrfs e criar configuracao:
 - Config name: root
 - Backup path: /
 
-tambem é possível usar Brtfs assintant pelo terminas (em caso de emergência).
+tambem é possível usar Brtfs assintant pelo terminais (em caso de emergência).
 
 # Melhoria nos recursos audio e video
 
@@ -79,7 +89,7 @@ Caso prentenda-se realizar *Edicao de áudio e video*:
 
 `apt instal ubuntustudio-installer`
 
-- posteriormente abrir o `ubuntustudio-installer` na GUI e marcar as duas primeiras opções: 
+- posteriormente abrir o `ubuntustudio-installer` na GUI e marcar as duas primeiras opções (**LEIA as opções**): 
     - `adds lowlatency kernel as boot default id available`
     - `Under-the-hood tweks for Ubuntu Studio Performance` 
 - depois no menu executar  `Ubuntu Studio auto Configuration`
