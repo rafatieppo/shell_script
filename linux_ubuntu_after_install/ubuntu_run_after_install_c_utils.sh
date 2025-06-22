@@ -66,5 +66,13 @@ if [ $opcao -eq 1 ] ; then
     apt install simple-scan
 fi
 
+echo -------------------------------------------------------------------
+echo Install ncal terminal calendar? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+    apt install ncal
+fi
+
 echo ------------------------------------------------------------
 echo ends here.
