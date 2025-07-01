@@ -74,5 +74,13 @@ if [ $opcao -eq 1 ] ; then
     apt install ncal
 fi
 
+echo -------------------------------------------------------------------
+echo Install file-roller to manage zip rar ... files? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+apt install file-roller
+fi
+
 echo ------------------------------------------------------------
 echo ends here.
