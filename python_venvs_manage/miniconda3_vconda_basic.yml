@@ -57,3 +57,5 @@ dependencies: # The list of packages to include in your environment
         - pandoc-eqnos
         - pandoc-fignos
         - pandoc-tablenos
+        - streamlit_dynamic_filters
+        - st_pages
