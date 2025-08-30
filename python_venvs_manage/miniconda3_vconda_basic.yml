@@ -28,6 +28,7 @@ dependencies: # The list of packages to include in your environment
     - openpyxl
     - conda-forge::opencv
     - Pandas
+    - plotly::plotly
     - plotly::plotly_express
     - Pweave
     - pylint
