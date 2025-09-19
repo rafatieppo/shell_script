@@ -13,6 +13,7 @@ dependencies: # The list of packages to include in your environment
     - conda-forge::sqlite
     - python-lsp-server          # python lsp    
     - conda-forge::pyright                    # python lsp
+    - conda-forge::wordcloud
     - ruff                                    # python lsp
     - beautifulsoup4
     - folium
