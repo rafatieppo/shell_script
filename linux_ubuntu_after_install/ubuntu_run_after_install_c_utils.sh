@@ -82,5 +82,15 @@ if [ $opcao -eq 1 ] ; then
 apt install file-roller
 fi
 
+echo -------------------------------------------------------------------
+echo Install VirtualBox oracle? [ 1/0 ]
+echo -------------------------------------------------------------------
+read opcao
+if [ $opcao -eq 1 ] ; then
+apt install virtualbox 
+fi
+
+
+
 echo ------------------------------------------------------------
 echo ends here.
