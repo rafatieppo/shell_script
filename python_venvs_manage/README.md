@@ -17,7 +17,16 @@ All the files are in: [https://github.com/rafatieppo/shell_script/tree/master/py
 - To *Deactivate* the environment: `conda deactivate`
 - Verify that the new environment was installed correctly: `conda env list` or `conda info --envs`.
 
-To instal a spcecific package:
+In WSL (windows) I got some errors. The solution is to use the files:
+
+- vconda_basic.txt
+- vconda_geo.txt
+- vconda_ml.txt
+
+- *instructions into the file*
+
+
+To install a spcecific package:
 
 - Activate the new environment: `conda activate vconda_basic`
 - Install the package: `conda install numpy=2.2.2` or `conda install numpy`

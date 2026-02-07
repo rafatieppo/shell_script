@@ -6,9 +6,20 @@ dependencies: # The list of packages to include in your environment
     - conda-forge::pyright                    # python lsp
     - ruff                                    # python lsp
     - conda-forge::opencv
+    - conda-forge::xarray
+    - conda-forge::dask
+    - conda-forge::netCDF4
+    - conda-forge::bottleneck
+    - conda-forge::fiona
+    - conda-forge::rasterio
+    - conda-forge::regionmask
+    - conda-forge::rioxarray
+    - conda-forge::libsqlite
+    - conda-forge::pysqlite3
     - beautifulsoup4
     - folium
     - ipykernel
+    - joblib
     - lxml
     - matplotlib
     - networkx
@@ -18,6 +29,7 @@ dependencies: # The list of packages to include in your environment
     - openpyxl
     - Pandas
     - geopandas
+    - regionmask
     - requests
     - scipy
     - scikit-learn
