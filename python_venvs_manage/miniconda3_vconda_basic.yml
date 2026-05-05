@@ -1,63 +1,58 @@
-name: vconda_basic # This will become the name of your environment
-dependencies: # The list of packages to include in your environment
-    - python=3.12 # You can specify versions
-    - beautifulsoup4
-    - geopandas
-    - anaconda::jinja2
-    - conda-forge::google-api-python-client
-    - conda-forge::google-auth-oauthlib
-    - conda-forge::pillow
-    - conda-forge::plotly
-    - conda-forge::python-magic
-    - conda-forge::selenium
-    - conda-forge::sqlite
-    - python-lsp-server          # python lsp    
-    - conda-forge::pyright                    # python lsp
-    - conda-forge::wordcloud
-    - ruff                                    # python lsp
-    - beautifulsoup4
-    - folium
-    - geopandas    
-    - icalendar
-    - ipykernel
-    - lxml
-    - matplotlib
-    - networkx
-    - nltk
-    - numpy
-    - oauth2client
-    - openpyxl
-    - conda-forge::opencv
-    - Pandas
-    - plotly::plotly
-    - plotly::plotly_express
-    - Pweave
-    - pylint
-    - requests
-    - seaborn
-    - scipy
-    - scikit-learn
-    - shapely
-    - streamlit
-    - tabulate
-    - xlrd
-    - jupyter
-    - jupyterlab
-    - jupyterlab-lsp
-    - autopep8
-    - mccabe
-    - pydocstyle
-    - pyflakes
-    - pylint
-    - rope
-    - yapf
-    - pip # Install pip in your environment
-    - pip: # Include pip dependencies last
-        - flask
-        - flask-bootstrap
-        - Flask-Testing
-        - pandoc-eqnos
-        - pandoc-fignos
-        - pandoc-tablenos
-        - streamlit_dynamic_filters
-        - st_pages
+# vconda_basic.yml
+name: vconda_basic
+channels:
+  - conda-forge
+  - plotly
+dependencies:
+  - python=3.14 # You can specify versions
+  - numpy
+  - beautifulsoup4
+  - geopandas
+  - jinja2
+  - google-api-python-client
+  - google-auth-oauthlib
+  - pillow
+  - plotly
+  - python-magic
+  - selenium
+  - sqlite
+  - python-lsp-server          # python lsp    
+  - pyright                    # python lsp
+  - wordcloud
+  - ruff                                    # python lsp
+  - beautifulsoup4
+  - folium
+  - geopandas    
+  - icalendar
+  - ipykernel
+  - lxml
+  - matplotlib
+  - networkx
+  - nltk
+  - numpy
+  - oauth2client
+  - openpyxl
+  - opencv
+  - Pandas
+  - plotly
+  - plotly_express
+  - Pweave
+  - pylint
+  - requests
+  - seaborn
+  - scipy
+  - scikit-learn
+  - shapely
+  - streamlit
+  - tabulate
+  - xlrd
+  - jupyter
+  - jupyterlab
+  - jupyterlab-lsp
+  - autopep8
+  - mccabe
+  - pydocstyle
+  - pyflakes
+  - pylint
+  - rope
+  - yapf

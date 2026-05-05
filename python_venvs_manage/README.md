@@ -2,9 +2,9 @@
 
 All the files are in: [https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage](https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage)
 
-## Create CONDA environment and install packages from a script (YML)
+## Linux From a YML file
 
-### From a YML file
+ATTENTION: **It takes so long, not recomended**
 
 - install **miniconda** from: [https://www.anaconda.com/](https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer) (follow the instructions)
 - Dowload the file `miniconda3_venv_basic.yml` in some directory. e.g. `~/Dowloads` .
@@ -17,16 +17,43 @@ All the files are in: [https://github.com/rafatieppo/shell_script/tree/master/py
 - To *Deactivate* the environment: `conda deactivate`
 - Verify that the new environment was installed correctly: `conda env list` or `conda info --envs`.
 
-In WSL (windows) I got some errors. The solution is to use the files:
+## Linux From a TXT file
 
-- vconda_basic.txt
-- vconda_geo.txt
-- vconda_ml.txt
+It is similar a `requirements.txt` file in `pip`
 
-- *instructions into the file*
+- After install miniconda activate *conda environment*: `source ~/miniconda3/bin/activate` 
+- create your environment: `conda create -n myenv python=3.14`
+- Load your enviroment: `conda activate myenv`
+- Create a `.txt` file with the packs, check the file `miniconda3_vconda_basic.txt` in repository. [https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage](https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage)
+- Install the packs: `conda install --file /path_to_YOUR_folder/miniconda3_vconda_basic.txt -c conda-forge -c plotly`
+- To *Deactivate* the environment: `conda deactivate`
+
+## Windows and In WSL (windows)
+
+- **the `yaml` file does not work in Windows**
+
+The solution was the:
+
+- win_vconda_basic_requirements
+- win_vconda_geo_requirements
+- win_vconda_ml_requirements
+
+To install is necessary other channels:
+
+1. Create manually the environment
+
+- `conda create --name <my-env>`
+
+2. Activate the environtm
+
+- `conda activate <my-env>` or `conda create -n myenv python=3.14` 
+
+3. Install packs from a list (it may take time)
+
+- `conda install --file win_vconda_basic_requirements.txt -c conda-forge -c plotly`
 
 
-To install a spcecific package:
+## To install a spcecific package:
 
 - Activate the new environment: `conda activate vconda_basic`
 - Install the package: `conda install numpy=2.2.2` or `conda install numpy`

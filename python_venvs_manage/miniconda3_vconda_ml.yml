@@ -1,6 +1,6 @@
 name: vconda_ml # This will become the name of your environment
 dependencies: # The list of packages to include in your environment
-    - python=3.12 # You can specify versions
+    - python=3.14 # You can specify versions
     - beautifulsoup4
     - conda-forge::google-api-python-client
     - conda-forge::google-auth-oauthlib

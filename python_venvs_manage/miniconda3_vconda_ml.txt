@@ -1,0 +1,36 @@
+beautifulsoup4
+conda-forge::google-api-python-client
+conda-forge::google-auth-oauthlib
+conda-forge::python-magic
+python-lsp-server          # python lsp    
+conda-forge::pyright                    # python lsp
+ruff                                    # python lsp
+folium
+ipykernel
+lxml
+matplotlib
+networkx
+nltk
+numpy
+oauth2client
+openpyxl
+conda-forge::opencv
+Pandas
+Pweave
+pylint
+requests
+scipy
+scikit-learn
+tabulate
+xlrd
+xgboost
+jupyter
+jupyterlab
+jupyterlab-lsp
+autopep8
+mccabe
+pydocstyle
+pyflakes
+pylint
+rope
+yapf
