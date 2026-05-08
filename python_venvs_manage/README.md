@@ -2,7 +2,7 @@
 
 All the files are in: [https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage](https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage)
 
-## Linux From a YML file
+## Miniconda: Linux From a YML file
 
 ATTENTION: **It takes so long, not recomended**
 
@@ -17,7 +17,7 @@ ATTENTION: **It takes so long, not recomended**
 - To *Deactivate* the environment: `conda deactivate`
 - Verify that the new environment was installed correctly: `conda env list` or `conda info --envs`.
 
-## Linux From a TXT file
+## Miniconda: Linux From a TXT file
 
 It is similar a `requirements.txt` file in `pip`
 
@@ -52,8 +52,7 @@ To install is necessary other channels:
 
 - `conda install --file win_vconda_basic_requirements.txt -c conda-forge -c plotly`
 
-
-## To install a spcecific package:
+## Miniconda: To install a spcecific package:
 
 - Activate the new environment: `conda activate vconda_basic`
 - Install the package: `conda install numpy=2.2.2` or `conda install numpy`
@@ -74,7 +73,7 @@ conda install <PACKAGE_PATH/PACKAGE>.conda
 ```
 
 
-## Create PIP (python) environment and install packages from a file
+## PIP: Create PIP (python) environment and install packages from a file
 
 ### List of packages for each environment
 
