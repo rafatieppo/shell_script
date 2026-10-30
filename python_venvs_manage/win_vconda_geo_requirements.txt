@@ -18,6 +18,7 @@ libsqlite
 lxml
 matplotlib
 mccabe
+morethemes
 netCDF4
 networkx
 nltk

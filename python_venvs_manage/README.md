@@ -11,11 +11,11 @@ ATTENTION: **It takes so long, not recomended**
 - Into the `~/Download` dir run: `conda env create -f vconda_basic.yml` . It will create virtual a environment in `/home/rafatieppo/miniconda3/envs/vconda_basic` and install all the listed packages. There are others environments (files):
   - miniconda3\_vconda\_basic.yml
   - miniconda3\_vconda\_geo.yml
-  - miniconda3\_vconda\_jupyters.yml
   - miniconda3\_vconda\_ml.yml
 - To *Activate* the new environment: `conda activate vconda_basic`
 - To *Deactivate* the environment: `conda deactivate`
 - Verify that the new environment was installed correctly: `conda env list` or `conda info --envs`.
+- If conda does not in auto start file: `source ~/miniconda3/bin/activate`
 
 ## Miniconda: Linux From a TXT file
 
@@ -51,6 +51,10 @@ To install is necessary other channels:
 3. Install packs from a list (it may take time)
 
 - `conda install --file win_vconda_basic_requirements.txt -c conda-forge -c plotly`
+
+or
+
+- `conda install --channel conda-forge --file win_vconda_basic_requirements.txt`
 
 ## Miniconda: To install a spcecific package:
 

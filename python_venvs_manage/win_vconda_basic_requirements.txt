@@ -15,6 +15,7 @@ jupyterlab
 jupyterlab-lsp
 lxml
 matplotlib
+morethemes
 mccabe
 networkx
 nltk

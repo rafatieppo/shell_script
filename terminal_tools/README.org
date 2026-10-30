@@ -1,0 +1,107 @@
+#+TITLE: Config files for terminal
+
+* Automatic config
+
+It is possible run =terminal_tools_install.sh= to:
+
+1. Copy config files to Tmux
+2. Copy config files to Alacratty
+3. Install =zsh= shell
+
+*NOTE*: Make sure that =tmux= and =Alacratty= are installed.
+
+Or follow the instructions to make a manual configuration as follow:
+
+* folder alacritty
+
+Alacritty - A fast, cross-platform, OpenGL terminal emulator.
+
+**Basic alacritty config**:
+
+Create a config file in: =$HOME/.config/alacritty/alacritty.toml= . There is template in =alacritty= folder.
+
+* folder tmux
+
+Basic tmux config.
+
+Create a config file in =/home/rafatieppo/.tmux.conf=
+
+There is template in =tmux= folder.
+
+** Terminal palette
+
+#+begin_src 
+[[nord]]
+    background_color = "#0f1c21"
+    cursor_color = "#00485a"
+    foreground_color = "#80b6ad"
+    palette = "#0f1c21:#046655:#04c975:#b5bd68:#308891:#94a5bc:#8abeb7:#80b6ad:#0f1c21:#046655:#04c975:#b5bd68:#308891:#94a5bc:#8abeb7:#80b6ad"
+#+end_src
+
+** Basic commands
+
++ Ctrl+B D — Detach from the current session.
++ Ctrl+B O — Split the window into two panes horizontally.
++ Ctrl+B E — Split the window into two panes vertically.
++ Ctrl+B Arrow Key (Left, Right, Up, Down) — Move between panes.
++ Ctrl+B X — Close pane.
++ Ctrl+B C — Create a new window.
++ Ctrl+B & — for killing a window
++ Ctrl+B N or P — Move to the next or previous window.
++ Ctrl+B 0 (1,2...) — Move to a specific window by number.
++ Ctrl+B : — Enter the command line to type commands. Tab completion is available.
++ Ctrl+B ? — View all keybindings. Press Q to exit.
++ Ctrl+B W — Open a panel to navigate across windows in multiple sessions.
+
+* folder zsh_ohmy
+
+To install `zsh`:
+
+#+begin_src
+  apt install zsh
+  apt install zplug
+#+end_src
+
+The default =shell= is :
+
+#+begin_src
+  rafatieppo@rt-avl52:~$ echo $SHELL
+  /bin/bash
+#+end_src
+
+Basic zsh and Oh My Zsh from: =https://wiki.debian.org/Zsh=
+  
+1. Create a config file in =/home/rafatieppo/.zshrc= (There is a basic sample in the folder)
+2. =apt install zsh zplug=
+3. To start =zsh= in terminal: =zsh= 
+4. You can use the alias included in the config file: =source $HOME/.zshrc=
+
+** Zplug management
+
+You can check your current plugins, update them, or install new ones. Use the following options with zplug command.
+
+=zplug <option>=
+
+#+begin_src 
+    check -- Return true if all packages are installed, false otherwise
+    clean -- Remove repositories which are no longer managed
+    clear -- Remove the cache file
+    env -- [User-defined] The environment variables of zplug
+    info -- Show the information such as the source URL and tag values for the given package
+    install -- Install packages in parallel
+    list -- List installed packages (more specifically, view the associative array $zplugs)
+    load -- Source installed plugins and add installed commands to $PATH
+    status -- Check if the remote repositories are up to date
+    update -- Update installed packages in parallel 
+#+end_src
+
+** Resourcers
+
+Link to install, plugins and fonts:
+https://ohmyz.sh/#install 
+https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
+https://www.nerdfonts.com/font-downloads
+https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+Previews dos temas presentes:
+https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
