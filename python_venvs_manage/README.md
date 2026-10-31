@@ -2,20 +2,13 @@
 
 All the files are in: [https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage](https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage)
 
-## Miniconda: Linux From a YML file
 
-ATTENTION: **It takes so long, not recomended**
+In this post, the first option for the management of the *Python* enviroment is the **miniconda**. For further information, check the links below:
 
-- install **miniconda** from: [https://www.anaconda.com/](https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer) (follow the instructions)
-- Dowload the file `miniconda3_venv_basic.yml` in some directory. e.g. `~/Dowloads` .
-- Into the `~/Download` dir run: `conda env create -f vconda_basic.yml` . It will create virtual a environment in `/home/rafatieppo/miniconda3/envs/vconda_basic` and install all the listed packages. There are others environments (files):
-  - miniconda3\_vconda\_basic.yml
-  - miniconda3\_vconda\_geo.yml
-  - miniconda3\_vconda\_ml.yml
-- To *Activate* the new environment: `conda activate vconda_basic`
-- To *Deactivate* the environment: `conda deactivate`
-- Verify that the new environment was installed correctly: `conda env list` or `conda info --envs`.
-- If conda does not in auto start file: `source ~/miniconda3/bin/activate`
+- [How to install miniconda](https://continuumio-docs.readthedocs-hosted.com/miniconda/install/)
+- [Difference between Conda and Miniconda](https://www.anaconda.com/docs/getting-started/concepts/anaconda-or-miniconda)
+
+Another option is the *pip*.
 
 ## Miniconda: Linux From a TXT file
 
@@ -25,10 +18,10 @@ It is similar a `requirements.txt` file in `pip`
 - create your environment: `conda create -n myenv python=3.14`
 - Load your enviroment: `conda activate myenv`
 - Create a `.txt` file with the packs, check the file `miniconda3_vconda_basic.txt` in repository. [https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage](https://github.com/rafatieppo/shell_script/tree/master/python_venvs_manage)
-- Install the packs: `conda install --file /path_to_YOUR_folder/miniconda3_vconda_basic.txt -c conda-forge -c plotly`
+- Install the packs: `conda install --file /path_to_YOUR_folder/miniconda3_vconda_basic.txt -c conda-forge`
 - To *Deactivate* the environment: `conda deactivate`
 
-## Windows and In WSL (windows)
+## Miniconda: Windows and In WSL (windows)
 
 - **the `yaml` file does not work in Windows**
 
@@ -75,7 +68,6 @@ conda create --name <ENVIRONMENT> python=<VERSION>
 # Replace <PACKAGE_PATH/PACKAGE> with the relative path to the package.
 conda install <PACKAGE_PATH/PACKAGE>.conda
 ```
-
 
 ## PIP: Create PIP (python) environment and install packages from a file
 
